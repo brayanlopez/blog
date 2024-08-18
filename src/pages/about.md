@@ -1,6 +1,6 @@
 ---
-title: "title"
-layout: "../layouts/Base.astro"
+title: 'title'
+layout: '../layouts/Base.astro'
 ---
 
 # Hola mundo
