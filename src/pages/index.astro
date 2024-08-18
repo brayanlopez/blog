@@ -15,13 +15,13 @@ const postEntries = await getCollection('tips')
 		<Hero />
 		<ul role="list" class="link-card-grid">
 			{
-				postEntries.map((post) => (
+				postEntries.map(({ data }) => (
 					<Card
 						href="https://docs.astro.build/"
-						title={post.data.title}
+						title={data.title}
 						body="Learn how Astro works and explore the official API docs."
-						time={post.data.pubDate}
-						tags={post.data.tags}
+						time={data.pubDate}
+						tags={data.tags}
 					/>
 				))
 			}
