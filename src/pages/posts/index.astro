@@ -5,10 +5,11 @@ import Card from '../../components/Card.astro'
 import Header from '../../components/Header.astro'
 import Hero from '../../components/Hero.astro'
 import Layout from '../../layouts/Layout.astro'
+import { formatDate } from '../../utils/utils'
 
 const postEntries = (await getCollection('tips')).sort(
 	(a, b) =>
-		new Date(a.data.pubDate).valueOf() - new Date(b.data.pubDate).valueOf(),
+		new Date(a.data.pubDate).valueOf() - new Date(b.data.pubDate).valueOf()
 )
 ---
 
@@ -23,7 +24,7 @@ const postEntries = (await getCollection('tips')).sort(
 						href={slug}
 						title={data.title}
 						body="Learn how Astro works and explore the official API docs."
-						time={data.pubDate}
+						time={formatDate(data.pubDate)}
 						tags={data.tags}
 					/>
 				))
