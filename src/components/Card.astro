@@ -18,7 +18,10 @@ const { href, title, body, time, tags } = Astro.props
 			{time}
 		</time>
 
-		<a href={`/posts/${[href]}`} rel="nofollow noopener noreferrer">
+		<a
+			href={`${import.meta.env.BASE_URL}/posts/${[href]}`}
+			rel="nofollow noopener noreferrer"
+		>
 			<h3 class="mt-0.5 text-lg font-medium text-gray-900">
 				{title}
 			</h3>
