@@ -3,7 +3,7 @@ title: 'title'
 layout: '../layouts/Base.astro'
 ---
 
-# Hola mundo
+## Hola mundo
 
 - 1
 - 2
