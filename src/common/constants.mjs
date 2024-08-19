@@ -1,1 +1,1 @@
-export const PROJECT_BASE = 'brayanlopez'
+export const PROJECT_BASE = 'blog'
